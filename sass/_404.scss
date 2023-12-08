@@ -1,0 +1,37 @@
+/*--======= end Error Section Here=======--*/
+#error_page {
+    position: relative;
+    z-index: 1;
+
+    &::after {
+        @include sudo_after($width: 100%, $height: 100%, $inset: 0);
+        content: '';
+        background-image: $error_color;
+        z-index: -1;
+    }
+
+    .error_box {
+        padding: 120px 0;
+
+        h4 {
+            @include heading_4($padding: 0, );
+            text-align: center;
+        }
+
+        p {
+            @include paragraph_sm($color: $white_color, $padding: 10px 0 40px);
+        }
+
+        button {
+            @include btn_sm($padding: 13px 20px, $bg_color: $orange_light, );
+
+            i {
+                transform: rotate(0deg)
+            }
+        }
+
+    }
+
+}
+
+/*--======= end Error Section Here=======--*/

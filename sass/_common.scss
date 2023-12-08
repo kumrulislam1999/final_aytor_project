@@ -1,0 +1,285 @@
+body {
+    font-family: var(--primary_font);
+}
+
+P {
+    font-family: var(--p_font);
+}
+
+
+/*====== Start Heading Here ======*/
+
+
+@mixin heading_1($color: $white_color, $f_size: 48px, $l_height: 58px, $padding: 14px 0px 16px, ) {
+    color: $color;
+    font-size: $f_size;
+    line-height: $l_height;
+    font-weight: 700;
+    padding: $padding;
+
+}
+
+@mixin heading_2($color: $white_color, $f_size: 48px, $l_height: 58px, $padding: 0px, ) {
+    text-align: center;
+    color: $color;
+    font-size: $f_size;
+    line-height: $l_height;
+    font-weight: 700;
+
+}
+
+@mixin heading_3($color: $text_color, $f_size: 36px, $l_height: 46px, $padding: 0 0 0 36px, ) {
+    text-align: center;
+    color: $color;
+    font-size: $f_size;
+    line-height: $l_height;
+    font-weight: 700;
+    padding: $padding;
+
+}
+
+@mixin heading_4($color: $white_color, $f_size: 24px, $l_height: 30px, $padding: 0 0 0 36px, ) {
+    color: $color;
+    font-size: $f_size;
+    line-height: $l_height;
+    font-weight: 600;
+    padding: $padding;
+
+}
+
+@mixin heading_5($color: $text_color, $f_size: 20px, $l_height: 30px, $padding: 0, ) {
+    color: $color;
+    font-size: $f_size;
+    line-height: $l_height;
+    font-weight: 600;
+    padding: $padding;
+
+}
+
+@mixin heading_6($color: $h1_color, $f_size: 18px, $l_height: 28px, $padding: 0, ) {
+    color: $color;
+    font-size: $f_size;
+    line-height: $l_height;
+    font-weight: 600;
+    padding: $padding;
+
+}
+
+/*====== End Heading Here ======*/
+
+
+
+/*====== Start Button Here ======*/
+
+@mixin btn_sm($color: $white_color , $bg_color: $orange_light , $padding: 0px, $margin: 0px, ) {
+    color: $color;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 26px;
+    background-color: $bg_color;
+    padding: $padding;
+    margin: $margin;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+
+    i {
+        transform: rotate(180deg)
+    }
+}
+
+@mixin btn_lg($color: $white_color , $bg_color: $orange_light , $padding: 0px, $margin: 0px, ) {
+    color: $color;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 30px;
+    background-color: $bg_color;
+    padding: $padding;
+    margin: $margin;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+
+    i {
+        transform: rotate(180deg)
+    }
+}
+
+/*====== End Button Here ======*/
+
+
+
+/*====== Start Paragraph Here ======*/
+@mixin paragraph_lg($color: $p_color, $f_size: 18px, $l_height: 30px, $padding: 0px, $margin: 0px, ) {
+    color: $color;
+    font-size: $f_size;
+    line-height: $l_height;
+    font-weight: 400;
+    padding: $padding;
+    margin: $margin;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+
+}
+
+@mixin paragraph_sm($color: $p_color, $f_size: 16px, $l_height: 28px, $padding: 0px, $margin: 0px, ) {
+    color: $color;
+    font-size: $f_size;
+    line-height: $l_height;
+    font-weight: 400;
+    padding: $padding;
+    margin: $margin;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+
+}
+
+/*====== End Paragraph Here ======*/
+
+
+
+/*====== Start Box_icon Here ======*/
+@mixin icon_style($padding: 0px, $margin: 0px, $border: 1px solid transparent, ) {
+    padding: $padding;
+    margin: $margin;
+    border: $border;
+}
+
+@mixin social_icon($f_size: 16px, $color: $white_color, $bg_color: transparent, $height: 36px, $width: 36px, $border_radius: 50%, ) {
+    text-align: center;
+    font-size: $f_size;
+    color: $color;
+    background-color: $bg_color;
+    border-radius: $border_radius;
+    width: $width;
+    height: $height;
+    line-height: $height;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*====== End Box_icon Here ======*/
+
+
+
+
+/*====== Start Hover Effect Here ======*/
+@mixin hover_orange($color: $white_color, $bg_color: transparent) {
+    color: $color;
+    background-color: $bg_color;
+}
+
+/*====== End Hover Effect Here ======*/
+
+
+/*====== Start after/Before Effect Here ======*/
+@mixin sudo_after($position: absolute, $bg_color: transparent, $inset: default, $left: default, $right: default, $top: default, $bottom: default, $width: default, $height: default) {
+    position: $position;
+    width: $width;
+    height: $height;
+    left: $left;
+    right: $right;
+    top: $top;
+    bottom: $bottom;
+    background-color: $bg_color;
+    inset: $inset;
+}
+
+@mixin bg_image($height: default, $bg_size: cover, $bg_position: center, $bg_repeat: no-repeat) {
+    height: $height;
+    background-size: $bg_size;
+    background-position: $bg_position;
+    background-repeat: $bg_repeat;
+}
+
+@mixin slick_btn($width: 0, $height: 0, $bg_color: transparent, $f_size: 0px, ) {
+    width: $width;
+    height: $height;
+    background-color: $bg_color;
+    font-size: $f_size;
+}
+
+@mixin slick_dot($width: 0, $height: 0, $bg_color: $orange_light, $border_radius: 5px, $border: none, $margin: 5px, ) {
+    width: $width;
+    height: $height;
+    background-color: $bg_color;
+    margin: $margin;
+    border-radius: $border_radius;
+    border: $border;
+}
+
+
+
+/*====== End after/Before Effect Here ======*/
+
+
+
+
+
+
+/*====== Start Media Query Here ======*/
+
+
+/*====== End Media Query Here ======*/
+
+
+
+
+
+
+
+/*====== Start Jquary_class Here ======*/
+@mixin show($opacity: 1, $visibility: visible, $transform: scale(1), $display: default, ) {
+    opacity: $opacity;
+    visibility: $visibility;
+    transform: $transform;
+    display: $display
+}
+
+@mixin hide_show($width: 100vw, $height: 100vh, $opacity: 0, $visibility: hidden, $transform: scale(0), $z-index: 0, $position: fixed, $inset: 0, $transition: 0.4s, $bg_color: default, ) {
+    position: $position;
+    width: $width;
+    height: $height;
+    inset: $inset;
+    opacity: $opacity;
+    visibility: $visibility;
+    z-index: $z-index;
+    transform: $transform;
+    transition: $transition;
+    background-color: $bg_color;
+}
+
+
+
+
+
+#search_popup.show {
+    @include show;
+}
+
+#cart_sidebar.show {
+
+    @include show($transform: scaleX(1))
+}
+
+#pupup_section.show {
+    @include show($transform: scaleX(1))
+}
+
+
+#product_section .shop_menu_line.show {
+    opacity: 1;
+    visibility: visible;
+    display: block;
+}
+
+#product_section .shop_menu_grid.show {
+    opacity: 1;
+    visibility: visible;
+    display: block;
+}
+
+/*====== End Jquary_class Here ======*/

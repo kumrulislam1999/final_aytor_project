@@ -1,0 +1,317 @@
+/*--======= Start Details Section Here ======= --*/
+#blog_detail_section {
+    margin: 100px 0;
+
+    .blog_box {
+        .detail_item {
+
+            .detail_info_box {
+                padding: 30px 0;
+
+                .detail_info_top {
+
+                    .date_box {
+                        p {
+                            padding-right: 30px;
+                            transition: 0.4s;
+                            @include paragraph_sm($padding: 0 30px 0 0, );
+
+                            i {
+                                @include social_icon($width: 16px, $height: 16px, $color: $p_color, );
+                                display: inline-flex;
+                                height: 24px;
+                                transition: 0.4s;
+                            }
+
+                            &:hover {
+                                color: $orange_light;
+
+                                i {
+                                    color: $orange_light;
+                                }
+                            }
+                        }
+                    }
+
+                    p {
+                        @include paragraph_sm($padding: 16px 0, )
+                    }
+
+                    .blockquote {
+                        background-color: $bg_color_dark;
+                        border-left: 5px solid $orange_light;
+                        padding: 40px 50px;
+
+                        p {
+                            padding: 0,
+                        }
+
+                        .blockquote-footer {
+                            font-size: 18px;
+                            color: $black_color;
+                            padding-top: 10px;
+                        }
+                    }
+
+                    a {
+                        h3 {
+                            @include heading_3($padding: 0, $f_size: 30px, $color: $h1_color);
+                            line-height: 36px;
+                        }
+                    }
+
+                    .galery_box {
+                        margin: 14px 0;
+                    }
+
+                    .tag_social_box {
+                        margin: 30px 0 10px;
+                        padding: 40px 0;
+                        border-top: 1px solid $border_color;
+                        border-bottom: 1px solid $border_color;
+
+                        .tag_could {
+                            a {
+                                @include paragraph_sm;
+                                padding: 3px 10px;
+                                margin-left: 10px;
+                                background-color: $bg_color_dark;
+                            }
+                        }
+
+                        .social_media_item {
+                            a {
+                                @include paragraph_sm;
+                                @include social_icon($width: 24px, $height: 24px, $color: $p_color, )
+                            }
+                        }
+                    }
+                }
+
+                .detail_info_bottom {
+                    .comment_box {
+                        .comment_box_main {
+                            background-color: $bg_color_dark;
+                            margin: 60px 0;
+                            padding: 40px 30px;
+                        }
+
+                        .comment_img_box {
+                            width: 100px;
+                            height: 100px;
+
+                            img {
+                                border-radius: 50%;
+                                width: 100px;
+                            }
+                        }
+
+                        .comment_detail_box {
+                            padding-left: 20px;
+
+                            p {
+                                @include paragraph_sm;
+                            }
+
+                            a {
+                                @include paragraph_sm;
+                            }
+
+                            .box_icon {
+                                margin: 16px 0;
+
+                                i {
+                                    @include social_icon($width: 24px, $height: 24px, $color: $p_color, )
+                                }
+                            }
+                        }
+
+                        .replay_box {
+                            padding: 20px 0;
+                            border-bottom: 1px solid $border_color;
+
+                            .date {
+                                @include paragraph_sm($padding: 0 0 13px 0);
+                                display: block;
+                            }
+
+                            p {
+                                padding: 0;
+                            }
+
+                            .comment_img_box {
+                                width: 80px;
+                                height: 80px;
+
+                                img {
+                                    width: 80px
+                                }
+
+                            }
+
+                            .replay_p {
+                                margin-top: 10px;
+                            }
+                        }
+
+                        .replay_box_second {
+                            margin-left: 60px
+                        }
+                    }
+                }
+
+                .comment_post_box {
+                    margin-top: 50px;
+                    padding: 40px;
+                    background-color: $white_color;
+                    box-shadow: 0 0 4px rgba($black_color, .2);
+
+                    h3 {
+                        @include heading_3($padding: 0, );
+                        text-align: left;
+                    }
+
+                    p {
+                        @include paragraph_sm($padding: 7px 0 42px, );
+                    }
+
+                    input {
+                        @include paragraph_sm($padding: 14px 20px, $margin: 12px 0, );
+                        background-color: $bg_color_dark;
+                        gap: 12px;
+                    }
+
+                    textarea {
+                        @include paragraph_sm($padding: 14px 20px, $margin: 12px 0, );
+                        background-color: $bg_color_dark;
+                        resize: none;
+                    }
+
+                    button {
+                        @include btn_sm($padding: 13px 26px, $bg_color: $black_color, );
+                        margin-top: 12px;
+                        transition: 0.4s;
+
+                        &:hover {
+                            background-color: $orange_light,
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    #blog_sidebar {
+        .search_box {
+            background-color: $bg_color_dark;
+            padding: 16px;
+
+            button {
+                padding-left: 18px;
+                border-left: 1px solid $border_color;
+
+                i {
+                    @include social_icon($width: 20px, $height: 20px, $color: $p_color, )
+                }
+            }
+        }
+
+        h5 {
+            @include heading_5;
+            position: relative;
+            display: inline-block;
+            margin-bottom: 20px;
+
+            &::after {
+                @include sudo_after($width: 0%, $height: 1px, $bg_color: $orange_light, $bottom: 0, $left: 0, );
+                content: "";
+                transition: 0.4s;
+            }
+
+            &:hover {
+                &::after {
+                    width: 100%;
+                }
+            }
+        }
+
+        .catagory {
+            margin: 50px 0;
+
+            .catagory_list {
+                li {
+                    padding: 10px 0;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+
+                    a,
+                    span {
+                        @include paragraph_sm;
+                        transition: 0.4s;
+                        line-height: 26px;
+                    }
+
+                    &:hover {
+
+                        a,
+                        span {
+                            color: $orange_light;
+                        }
+                    }
+                }
+            }
+        }
+
+        .recent_artical {
+            .recent_post__item {
+                margin: 20px 0;
+
+                .recent_img {
+                    width: 80px;
+
+                    img {
+                        display: block;
+                        height: 80px;
+                    }
+                }
+
+                .recent_info {
+                    width: calc((100% - 80px));
+                    padding: 0 30px 0 15px;
+
+                    p {
+                        @include paragraph_sm($padding: 0, $color: $black_color, );
+                        line-height: 26px;
+                        font-family: $primary_font;
+                        transition: 0.4s;
+                        display: block;
+                    }
+
+                    .date {
+                        font-size: 12px;
+                        line-height: 15px;
+
+                        &:hover {
+                            color: $orange_light;
+                        }
+                    }
+
+                }
+
+            }
+        }
+
+        .popular_tag {
+            margin: 50px 0;
+
+            a {
+                @include paragraph_sm($padding: 2px 10px, $margin: 5px);
+                background-color: $bg_color_dark;
+            }
+        }
+
+    }
+}
+
+/*--======= Start Details Section Here ======= --*/

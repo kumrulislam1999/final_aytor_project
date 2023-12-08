@@ -1,0 +1,181 @@
+ /*--====== Start BLog Classice Section Here ======--*/
+
+ #blog_classic_section {
+     margin: 100px 0;
+
+     .blog_box {
+         .blog_classic_item {
+             .blog_classic_img_box {
+                 margin-top: 30px;
+
+                 .arrow {
+                     @include sudo_after($width: 50px, $height: 50px, $top: 50%, $bg_color: $orange_light, );
+                     color: $orange_light;
+                     box-shadow: 0 0 8px rgba($black_color, 0.1);
+                     text-align: center;
+                     line-height: 50px;
+                     border-radius: 50%;
+                     color: $white_color;
+                     border: 1px solid $border_color;
+                     z-index: 3;
+                     transform: translate(-50%);
+                     transition: 0.4s;
+
+                     &:hover {
+                         background-color: $white_color;
+                         color: $orange_light;
+                     }
+                 }
+
+                 .arrow_left {
+                     left: -20px;
+
+                 }
+
+                 .arrow_right {
+                     right: -20px;
+                     transform: rotate(180deg) translate(-50%);
+                 }
+             }
+
+             .blog_classic_info_box {
+                 padding: 30px 40px;
+
+                 .date_box {
+                     padding: 7px 0;
+
+                     p {
+                         @include paragraph_sm($padding: 0 35px 0 0, );
+                         transition: 0.4s;
+                         cursor: pointer;
+
+                         i {
+                             @include social_icon($width: 16px, $height: 16px, $color: $p_color, );
+                             transition: 0.4s;
+                         }
+
+                         &:hover {
+                             color: $orange_light;
+
+                             i {
+                                 color: $orange_light;
+                             }
+                         }
+                     }
+                 }
+
+                 a {
+                     text-align: left;
+
+                     h3 {
+                         @include heading_3($padding: 0, $f_size: 30px, );
+                         text-align: left
+                     }
+                 }
+
+                 p {
+                     @include paragraph_lg($padding: 16px 0, $color: $p_color )
+                 }
+
+                 a.sec_btn {
+                     @include btn_sm($padding: 0 0 5px, $bg_color: transparent, $color: $text_color, );
+                     position: relative;
+
+                     &::after {
+                         @include sudo_after($width: 0%, $height: 1px, $bg_color: $orange_light, $left: 0, $bottom: 0, );
+                         content: "";
+                         transition: 0.4s;
+                     }
+
+                     &:hover {
+                         &::after {
+                             width: 100%;
+                         }
+                     }
+                 }
+             }
+         }
+
+         .video_item {
+             .bg_info {
+                 @include sudo_after($width: 100px, $height: 100px, $bg_color: $white_color, $left: 50%, $top: 50%, );
+                 display: flex;
+                 align-items: center;
+                 justify-content: center;
+                 border-radius: 50%;
+                 z-index: 1;
+                 transform: translate(-50%, -50%);
+
+                 &::after {
+                     @include sudo_after($width: 100%, $height: 100%, $inset: 0, $bg_color: rgba($white_color, 0.5, ));
+                     content: "";
+                     border-radius: 50%;
+                     z-index: -1;
+                     animation: scaleup 5s ease-in-out infinite;
+                 }
+
+                 &::before {
+                     @include sudo_after($width: 100%, $height: 100%, $inset: 0, $bg_color: rgba($white_color, 0.5, ));
+                     content: "";
+                     border-radius: 50%;
+                     z-index: -1;
+                     animation: scaleup 5s ease-in-out 2s infinite;
+                 }
+
+                 @keyframes scaleup {
+                     0% {
+                         transform: scale(1);
+                         opacity: 0,
+                     }
+
+                     40% {
+                         opacity: 0.4
+                     }
+
+                     100% {
+                         transform: scale(1.5);
+                         opacity: 0
+                     }
+                 }
+
+
+
+                 a i {
+                     font-size: 50px;
+                     color: $orange_light;
+                 }
+             }
+         }
+
+         .pagination_box {
+             margin: 40px 0;
+
+             .progress {
+                 width: 30%;
+                 background-color: $text_color;
+                 height: 3px;
+             }
+
+             .pagination {
+                 .page_item {
+                     a {
+                         @include social_icon($color: $p_color, $bg_color: $white_color, $border_radius: 0, );
+                         box-shadow: 0 0 4px rgba($black_color, 0.2);
+                     }
+
+                     .arrow_pagination {
+                         width: 72px
+                     }
+
+                     a.active {
+                         background-color: $black_dark;
+                         color: $white_color,
+                     }
+                 }
+             }
+         }
+
+     }
+ }
+
+ /*--====== End BLog Classice Section Here ======--*/

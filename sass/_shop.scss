@@ -1,0 +1,169 @@
+#product_section {
+    margin: 100px 0;
+
+    .shopping_headbar {
+        margin-bottom: 30px;
+
+        .shopping_headbar_item {
+            i {
+                @include social_icon($color: $white_color, $bg_color: $black_color, $border_radius: 0, )
+            }
+
+            i.show {
+                background-color: $orange_light
+            }
+
+            select {
+                background-color: $bg_color_dark;
+                padding: 6px 16px;
+            }
+        }
+
+        .progress {
+            height: 2px;
+
+            .progress-bar {
+                background-color: $p_color;
+                width: 20%;
+            }
+        }
+    }
+
+
+    .shop_menu_line {
+        @extend #arrival_section;
+        display: none;
+        opacity: 0;
+        visibility: hidden;
+        ;
+
+        .product_box {
+            margin: 12px 0;
+
+            .product_img_box {
+
+                img {
+                    transition: 0.4s;
+
+                    &:hover {
+                        transform: scale(1.3)
+                    }
+                }
+            }
+
+            .product_info_box {
+                padding: 10px 20px;
+                text-align: left !important;
+
+                .star_icon {
+                    padding-right: 10px;
+
+                    i {
+                        line-height: 28px;
+                        padding: 13px 0 0;
+                        margin: 0px -4px;
+
+                    }
+                }
+            }
+
+        }
+
+    }
+
+    .shop_menu_grid {
+        @extend #arrival_section;
+        display: none;
+        opacity: 0;
+        visibility: hidden;
+
+        .product_box {
+            margin: 0 0 60px;
+
+            .shop_grid_item {
+                align-items: stretch;
+                ;
+
+                .product_img_box {
+                    height: 100%;
+                    width: 100%;
+
+                    img {
+                        transition: 0.4s;
+                        height: 100%;
+                        width: 100%;
+
+
+                        &:hover {
+                            transform: scale(1.3)
+                        }
+                    }
+
+                    .badge {
+                        border-radius: 0;
+                        transform: rotate(0);
+                        top: 0;
+                        left: 0;
+                    }
+
+
+                }
+
+                .product_info_box {
+                    padding: 30px 30px !important;
+                    text-align: left !important;
+
+                    .price {
+                        display: block;
+                    }
+
+                    .center_paragraph {
+                        padding: 20px 0;
+                    }
+
+                    .cart_icon {
+                        display: inline-flex;
+                        position: static;
+
+                        li {
+                            position: static;
+                            margin: 5px;
+                            left: none;
+                            right: none;
+                            top: none;
+
+                            a {
+                                @include social_icon($color: $white_color, $bg_color: $black_dark, $width: 36px, $height: 36px, );
+                                transition: 0.4s;
+
+                                &:hover {
+                                    @include hover_orange($bg_color: $orange_light, $color: $white_color, )
+                                }
+
+                            }
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+
+    .pagination {
+        .page_item {
+            a {
+                @include social_icon($color: $p_color, $bg_color: $white_color, $border_radius: 0, );
+                box-shadow: 0 0 8px rgba($black_color, 0.2);
+            }
+
+            .arrow_pagination {
+                width: 72px
+            }
+
+            a.active {
+                background-color: $black_dark;
+                color: $white_color,
+            }
+        }
+    }
+}

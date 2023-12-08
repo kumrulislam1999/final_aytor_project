@@ -1,0 +1,335 @@
+    /*--======= Start Page Bannar Section Here =======--*/
+    #page_bannar {
+        @include bg_image;
+        height: 400px;
+        position: relative;
+        z-index: 1;
+
+        &::after {
+            @include sudo_after($width: 100%, $inset: 0, $bg_color: rgba($black_color, 0.8));
+
+            content: '';
+            z-index: -1;
+        }
+
+        h2 {
+            @include heading_2;
+        }
+
+        .breadcrumb {
+            li {
+                a {
+                    @include paragraph_sm($color: $white_color, )
+                }
+            }
+        }
+    }
+
+    /*--======= End Page Bannar Section Here =======--*/
+
+    /*--======= Start Learn Section Here =======--*/
+    #learn_section {
+        margin: $section_padding 0;
+        background-color: $bg_color_dark;
+
+
+        .learn_item {
+            position: relative;
+            z-index: 1;
+
+            .img_slide_back {
+                position: absolute;
+                padding-top: 47px;
+                left: 0;
+                bottom: -40px;
+                width: 50%;
+                z-index: -1
+            }
+
+
+            .item_right {
+                padding: 76px 20px;
+
+                h3 {
+                    @include heading_3($padding: 0 0 10px, );
+                    text-align: left;
+                }
+
+                p {
+                    @include paragraph_sm($padding: 0, )
+                }
+
+                hr {
+                    margin: 30px 0;
+                }
+
+                p.turm {
+                    display: block;
+                    @include paragraph_sm($padding: 0 0 10px, );
+
+                    i {
+                        @include social_icon($color: $orange_light, $width: 16px, $height: 16px, )
+                    }
+                }
+
+                a {
+                    @include btn_sm($bg_color: $orange_light, $padding: 13px 18px, $margin: 24px 0 0);
+                }
+            }
+        }
+
+
+    }
+
+    /*--======= End Learn Section Here =======--*/
+
+    /*--======= Start Success Section Here =======--*/
+    #success_section {
+
+        .success_box {
+            padding: 0 95px;
+
+            .success_item {
+                text-align: center;
+
+                .img_box {
+                    @include social_icon($width: 100px, $height: 100px, $bg_color: rgba($orange_light, 0.1));
+                    border-radius: 50%;
+                    margin: 0 auto 10px;
+
+                    img {
+                        width: 50px;
+
+                        &:hover {
+                            color: $orange_light
+                        }
+                    }
+                }
+
+                h3 {
+                    @include heading_3($color: $orange_light, $padding: 0, );
+                    text-align: center;
+                }
+
+                p {
+                    @include paragraph_lg()
+                }
+            }
+        }
+    }
+
+    /*--======= End Success Section Here =======--*/
+
+    /*--======= End Story Section Here =======--*/
+    #stroy_section {
+        @extend #spacial_section;
+        margin: $section_padding 0;
+
+
+        p:nth-child(2) {
+            padding-bottom: 18px
+        }
+    }
+
+    /*--=======End Story Section Here=======--*/
+
+    /*--=======End essential Section Here=======--*/
+    #about_essential {
+        @extend #essential_section;
+
+        .essential_box {
+            transform: translateY(0)
+        }
+    }
+
+    /*--======= End essential Section Here ======= --*/
+
+    /*--======= Start Leadership Section Here ======= --*/
+    #leadership_section {
+        padding: $section_padding 0;
+        position: relative;
+
+        .product_box {
+            margin: 12px;
+
+            .product_info_box {
+                padding: 13px 0 27px;
+
+                h5 {
+                    @include heading_5($l_height: 20px, );
+                }
+
+                p {
+                    @include paragraph_sm($color: $orange_light, )
+                }
+
+                .social_icon {
+                    @include social_icon($width: 24px, $height: 24px, $color: $h1_color, );
+                    text-align: center;
+                    margin: auto;
+                }
+            }
+        }
+
+        .arrow {
+
+            @include social_icon($bg_color: $orange_light, $width: 40px, $height: 40px, );
+            position: absolute;
+            z-index: 8;
+
+            &:hover {
+                @include hover_orange($color: $orange_light, $bg_color: $white_color, );
+                box-shadow: 0 0 8px rgba($black_color, 0.4);
+            }
+        }
+
+        .arrow_left {
+            left: -5%;
+            top: 50%;
+        }
+
+        .arrow_right {
+            right: -2%;
+            top: 50%;
+            transform: rotate(180deg);
+        }
+
+    }
+
+    /*--======= End Leadership Section Here ======= --*/
+
+
+
+
+    /*--======= Start Profile Section Here ======= --*/
+    #profile_section {
+        position: relative;
+
+        .profile_item {
+            i {
+                @include social_icon($width: 50px, $height: 50px, $f_size: 40px, $color: $p_color, );
+                text-align: center;
+                display: block;
+                margin: auto;
+            }
+
+            .shape {
+                width: 139px;
+            }
+
+            .profile_sliding_box {
+                width: 100px;
+                height: 100px;
+                border-radius: 50%;
+                margin: 25px auto 20px;
+
+
+                img {
+                    border-radius: 50%;
+                }
+            }
+
+            .append_dot_box {
+                .slick_dot {
+
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    li {
+                        @include slick_dot($width: 10px, $height: 6px, $bg_color: rgba($black_color, 0.2), );
+                        transition: 0.4s;
+
+                        button {
+                            @include slick_btn
+                        }
+
+                    }
+
+                    li.slick-active {
+                        @include slick_dot($width: 28px, $height: 6px, $bg_color: $orange_dark)
+                    }
+                }
+            }
+        }
+
+
+    }
+
+    /*--======= End Profile Section Here ======= --*/
+
+
+
+    /*--======= Start Instagram Section Here ======= --*/
+    #instagram_section {
+        padding: $section_padding 0;
+        position: relative;
+
+        h3 {
+            @include heading_3($padding: 0 0 16px, )
+        }
+
+        .instagram_sliding {
+            padding-bottom: 45px;
+
+            .instagram_item {
+                margin: 0 12px;
+                position: relative;
+                z-index: 1;
+
+                &::after {
+                    @include sudo_after($width: 100%, $height: 100%, $inset: 0, $bg_color: rgba($black_dark, 0.8));
+                    @include show($opacity: 0, $visibility: hidden, $transform: scale(0), );
+                    content: "";
+                    transition: 0.6s;
+
+                }
+
+                .insta_icon {
+                    @include social_icon($f_size: 40px, );
+                    @include sudo_after($width: 100%, $height: 100%, $inset: 0, );
+                    z-index: 4;
+                    @include show($opacity: 0, $visibility: hidden, $transform: rotate(0), );
+                    transition: 0.6s;
+                    transition-delay: 0.1s;
+
+                }
+
+                &:hover {
+                    &::after {
+                        @include show
+                    }
+
+                    .insta_icon {
+                        @include show($transform: rotate(360deg));
+                    }
+                }
+            }
+        }
+
+        .append_dot_box_1 {
+            .slick_dot {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+
+                li {
+                    @include slick_dot($width: 10px, $height: 6px, $bg_color: rgba($black_color, 0.2), );
+                    transition: 0.4s;
+
+                    button {
+                        @include slick_btn
+                    }
+
+                }
+
+                li.slick-active {
+                    @include slick_dot($width: 28px, $height: 6px, $bg_color: $orange_dark)
+                }
+            }
+        }
+
+
+    }
+
+    /*--======= End Instagram Section Here ======= --*/

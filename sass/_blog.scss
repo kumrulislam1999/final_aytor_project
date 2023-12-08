@@ -1,0 +1,91 @@
+    /* --======= Start Blog Section Here =======-- */
+    #blog_section {
+        margin: 100px 0;
+
+        .blog_box {
+            @extend #arrival_section;
+
+            .product_box {
+                text-align: left !important;
+                margin: 12px 0;
+
+                .product_img_box {
+                    img {
+                        transition: 0.4s
+                    }
+
+                    .badge {
+                        top: 0;
+                        left: 0;
+                        border-radius: 0;
+                        transform: rotate(0);
+                        padding: 5px 25px;
+                        background-color: rgba($black_color, 0.6)
+                    }
+                }
+
+                .product_info_box {
+                    text-align: left !important;
+                    padding: 20px 30px;
+
+                    p {
+                        margin: 12px 0 16px
+                    }
+
+                    .sec_btn_lg {
+                        position: relative;
+                        display: inline-flex;
+
+                        &::after {
+                            @include sudo_after($width: 0%, $height: 2px, $bg_color: $orange_light, $left: 0, $bottom: 0, );
+                            content: "";
+                            transition: 0.4s;
+                        }
+
+                        &:hover {
+                            &::after {
+                                width: 100%
+                            }
+                        }
+                    }
+                }
+
+                &:hover {
+                    img {
+                        transform: scale(1.2);
+                        transition: 0.4s;
+                    }
+                }
+            }
+        }
+
+        .pagination_box {
+            margin: 40px 0;
+
+            .progress {
+                width: 30%;
+                background-color: $text_color;
+                height: 3px;
+            }
+
+            .pagination {
+                .page_item {
+                    a {
+                        @include social_icon($color: $p_color, $bg_color: $white_color, $border_radius: 0, );
+                        box-shadow: 0 0 8px rgba($black_color, 0.2);
+                    }
+
+                    .arrow_pagination {
+                        width: 72px
+                    }
+
+                    a.active {
+                        background-color: $black_dark;
+                        color: $white_color,
+                    }
+                }
+            }
+        }
+    }
+
+    /* --======= End Blog Section Here =======-- */
