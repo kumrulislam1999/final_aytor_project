@@ -2,144 +2,145 @@
  #cart_section {
      margin: 100px 0;
 
-     table {
-         border: none;
+     #product_table {
+         table {
+             border: none;
 
-         .heading_box {
-             th {
-                 padding: 16px;
-                 background-color: $bg_color_dark;
-                 border-bottom: 2px solid $orange_light;
-             }
-         }
-
-
-
-         .detail_box {
-
-             th,
-             td {
-                 padding: 40px 0;
-                 border: 1px solid $border_color;
-             }
-
-             .image {
-                 img {
-                     width: 120px;
-                     height: 120px;
+             .heading_box {
+                 th {
+                     padding: 16px;
+                     background-color: $bg_color_dark;
+                     border-bottom: 2px solid $orange_light;
                  }
              }
 
-             .name {
-                 a {
-                     p {
-                         @include heading_6;
-                         transition: 0.4s;
 
-                         &:hover {
-                             color: $orange_light;
+
+             .detail_box {
+
+                 th,
+                 td {
+                     padding: 40px 0;
+                     border: 1px solid $border_color;
+                 }
+
+                 .image {
+                     img {
+                         width: 120px;
+                         height: 120px;
+                     }
+                 }
+
+                 .name {
+                     a {
+                         p {
+                             @include heading_6;
+                             transition: 0.4s;
+
+                             &:hover {
+                                 color: $orange_light;
+                             }
                          }
+
+                     }
+                 }
+
+                 .price,
+                 .total {
+                     p {
+                         @include paragraph_sm;
+                     }
+                 }
+
+                 .quantity {
+
+                     button {
+                         i {
+                             @include social_icon($color: $text_color, $border_radius: 0, $bg_color: $bg_color_dark, );
+                             border: 1px solid $border_color;
+                         }
+
                      }
 
-                 }
-             }
-
-             .price,
-             .total {
-                 p {
-                     @include paragraph_sm;
-                 }
-             }
-
-             .quantity {
-
-                 button {
-                     i {
-                         @include social_icon($color: $text_color, $border_radius: 0, $bg_color: $bg_color_dark, );
+                     input {
+                         text-align: center;
+                         width: 70px;
+                         height: 36px;
                          border: 1px solid $border_color;
+                         margin: 0 9px;
+                         background-color: $bg_color_dark;
                      }
 
                  }
+
+                 .trash {
+                     text-align: center;
+
+                     i {
+                         @include social_icon($color: $orange_light, $f_size: 20px, );
+                         text-align: center;
+                         width: 100%;
+                     }
+                 }
+
+             }
+
+             .coupon_box {
+
+                 border: 1px solid $border_color;
+                 padding: 15px;
 
                  input {
-                     text-align: center;
-                     width: 70px;
-                     height: 36px;
+                     padding: 11px 20px;
+                     margin: 0 10px 0 0;
                      border: 1px solid $border_color;
-                     margin: 0 9px;
-                     background-color: $bg_color_dark;
                  }
 
+                 button {
+                     @include btn_sm($padding: 11px 20px, $bg_color: $orange_light, )
+                 }
+
+                 a {
+                     @include btn_sm($padding: 11px 23px, $bg_color: $orange_light, $color: $white_color, $margin: 0 0 0 10px)
+                 }
              }
 
-             .trash {
-                 text-align: center;
 
-                 i {
-                     @include social_icon($color: $orange_light, $f_size: 20px, );
+         }
+
+         .table_sm {
+             .detail_box {
+                 padding: 20px 0;
+
+                 th {
+                     padding: 15px;
                      text-align: center;
-                     width: 100%;
+                 }
+
+                 td {
+                     padding: 15px;
+                     text-align: end;
+
+
+                 }
+
+                 td.trash {
+                     text-align: end;
+
+                     i {
+                         text-align: right;
+                         justify-content: end;
+                     }
                  }
              }
 
-         }
-
-         .coupon_box {
-
-             border: 1px solid $border_color;
-             padding: 15px;
-
-             input {
-                 padding: 11px 20px;
-                 margin: 0 10px 0 0;
-                 border: 1px solid $border_color;
-             }
-
-             button {
-                 @include btn_sm($padding: 11px 20px, $bg_color: $orange_light, )
-             }
-
-             a {
-                 @include btn_sm($padding: 11px 23px, $bg_color: $orange_light, $color: $white_color, $margin: 0 0 0 10px)
-             }
-         }
-
-
-     }
-
-     .table_sm {
-         .detail_box {
-             padding: 20px 0;
-
-             th {
-                 padding: 15px;
-                 text-align: center;
-             }
-
-             td {
-                 padding: 15px;
-                 text-align: end;
-
-
-             }
-
-             td.trash {
-                 text-align: end;
-
-                 i {
-                     text-align: right;
-                     justify-content: end;
+             .coupon_box {
+                 .submit_coupon {
+                     margin-top: 20px;
                  }
              }
          }
-
-         .coupon_box {
-             .submit_coupon {
-                 margin-top: 20px;
-             }
-         }
      }
-
 
      .checkout_box {
          margin-top: 30px;

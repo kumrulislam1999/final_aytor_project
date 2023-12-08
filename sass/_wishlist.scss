@@ -1,6 +1,128 @@
       /*--======= Start wishtlist Section Here =======--*/
       #wishtlist_Section {
-          margin: 100px 0;
+          margin: 100px 0px;
+
+          h4 {
+              @include heading_4($padding: 0 0 30px 0, $color: $h1_color, )
+          }
+
+          #wishlist_table {
+              padding: 0;
+              margin: 0;
+
+              .heading_box {
+                  border-bottom: 1px solid $orange_light ;
+                  background-color: $bg_color_dark;
+
+                  h6 {
+                      @include heading_6($padding: 15px 0, )
+                  }
+
+                  i,
+                  input {
+                      margin: 15px 14px
+                  }
+              }
+
+              .detail_box {
+                  border-bottom: 1px solid $border_color;
+
+                  td {
+                      padding: 30px 0;
+
+                      p {
+                          @include paragraph_sm
+                      }
+
+                      a {
+                          p {
+                              @include paragraph_lg;
+                              font-weight: 600;
+                          }
+                      }
+
+                      button {
+                          @include btn_sm($padding: 11px 26px, $bg_color: $orange_light, );
+
+                          i {
+                              transform: rotate(0)
+                          }
+                      }
+                  }
+
+                  .stock_status {
+                      i {
+                          @include social_icon($width: 14px, $height: 24px, $color: $green_color, $f_size: 20px)
+                      }
+                  }
+
+                  .trash {
+                      i {
+                          margin: 0 25px
+                      }
+                  }
+              }
+
+
+              .table_sm {
+                  width: 100%;
+
+                  text-align: center;
+
+                  td,
+                  th {
+                      padding-top: 0;
+                      padding-bottom: 0;
+                  }
+
+                  .detail_box {
+                      border: none;
+
+                      table {
+                          margin: 30px 0;
+
+                          th {
+                              padding: 15px 0;
+                              border-bottom: 2px solid $orange_light;
+                              background-color: $bg_color_dark;
+                          }
+
+                          td {
+                              padding: 15px 0;
+                              border: 1px solid $border_color;
+
+                              img {
+                                  width: 140px;
+                                  height: 140px
+                              }
+
+                          }
+                      }
+
+
+                  }
+
+              }
+          }
+
+          .social_media {
+              margin: 30px 0;
+
+              p {
+                  @include heading_6($padding: 0 20px 0 0)
+              }
+
+              .icon_box {
+                  li {
+                      margin: 0 5px;
+
+                      a {
+                          @include social_icon($width: 36px, $height: 36px, $bg_color: $orange_light, $border_radius: 50%, )
+                      }
+                  }
+              }
+          }
+
       }
 
       /*--======= End wishtlist Section Here =======--*/

@@ -1,0 +1,92 @@
+    /*--======= Start Contact Section Here =======--*/
+    #contact_section {
+        margin: 100px 0;
+
+        .contact_top_part {
+            .contact_item {
+                .contact_inneritem {
+                    padding: 50px 35px;
+                    box-shadow: 0px 5px 30px 0px rgba($text_color, 0.08);
+
+                    .contact_icon {
+                        i {
+                            @include social_icon($f_size: 25px, $color: $orange_light, $width: 25px, $height: 25px, );
+                            margin-right: 10px;
+                        }
+                    }
+
+                    .contact_info {
+                        h4 {
+                            @include heading_5($color: $text_color, $padding: 0 0 10px)
+                        }
+
+                        p {
+                            @include paragraph_lg($padding: 5px 0 16px, )
+                        }
+
+                        h6 {
+                            @include heading_6($padding: 0)
+                        }
+
+                        .icon_box {
+                            padding: 10px 0;
+
+                            li {
+                                margin: 0 5px;
+
+                                a {
+                                    i {
+                                        @include social_icon($width: 16px, $height: 16px, $color: $p_color, $f_size: 20px, );
+                                        transition: 0.4s;
+                                    }
+
+                                    &:hover {
+                                        i {
+                                            color: $orange_light,
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .contact_bottom_part {
+            margin-top: 72px;
+            padding-top: 28px;
+
+            .contact_touch {
+                box-shadow: 0px 5px 30px 0px rgba($text_color, 0.08);
+
+                .contact_touch_left {
+                    padding: 30px 12px 30px 30px;
+
+                    h3 {
+                        @include heading_3($padding: 0);
+                        text-align: left;
+                    }
+
+                    input,
+                    textarea {
+                        margin: 12px 0;
+                        padding: 14px 20px;
+                        background-color: $bg_color_dark;
+                        resize: none;
+                    }
+
+                    button {
+                        @include btn_sm($bg_color: $black_color, $color: $white_color, $padding: 13px 29px, $margin: 12px 0);
+                        transition: 0.4s;
+
+                        &:hover {
+                            background-color: $orange_light;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    /*--======= End Contact Section Here =======--*/
