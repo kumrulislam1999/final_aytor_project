@@ -445,33 +445,32 @@
       padding: $section_padding 0;
 
       .time_box {
-          .timer {
+          #timer {
               text-align: center;
               padding: 7px 55px;
               background-color: $white_color;
               box-shadow: 0 0 2px rgba($black_color, 0.3);
               border-radius: 40px;
               transform: translateY(50%);
-              z-index: 11;
+              position: relative;
+              z-index: 12;
 
-              .timer_item {
-                  text-align: center;
 
-                  h4 {
-                      @include heading_4($color: $text_color, $padding: 0, );
 
-                  }
+              h4 {
+                  @include heading_4($color: $text_color, $padding: 0, );
 
-                  p {
-                      @include paragraph_sm($l_height: 26px, )
-                  }
               }
 
-              span {
-                  font-size: 50px;
-                  font-weight: 800;
-                  color: $orange_light;
+              p {
+                  @include paragraph_sm($l_height: 26px, )
               }
+          }
+
+          span {
+              font-size: 50px;
+              font-weight: 800;
+              color: $orange_light;
           }
       }
 
@@ -833,6 +832,7 @@
           box-shadow: 0 0 8px rgba($black_color, 0.2);
           transform: translateY(50%);
           z-index: 12;
+          position: relative;
 
           .essential_item {
               text-align: left;

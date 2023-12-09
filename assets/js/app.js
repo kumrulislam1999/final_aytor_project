@@ -120,6 +120,22 @@ $(function () {
 
     })
 
+
+    $("#timer").countdown("2024/12/10", function (event) {
+        var $this = $(this).html(
+            event.strftime(
+                "" +
+                " <div><h4>%D</h4> <p>Days</p></div> " +
+                "<span>:</span>" +
+                " <div><h4>%H</h4> <p> Hour </p></div> " +
+                "<span>:</span>" +
+                " <div><h4>%M</h4> <p>Minute</p></div>   " +
+                "<span>:</span>" +
+                " <div><h4>%S</h4> <p>Second</p> </div>  "
+            )
+        );
+    });
+
     $('.latest_sliding_box').slick({
         autoplay: true,
         autoplaySpeed: 1000,
@@ -386,6 +402,21 @@ $(function () {
 
     })
     // ==== End Shop_Classic_page sliding Event jQuery  ===== //
+
+    // ==== Start Shop_Classic_page sliding Event jQuery  ===== //
+    $(".sidebar_sliding_box").slick({
+        autoplay: true,
+        autoplaySpeed: 2000,
+        transition: 0.5,
+        arrows: false,
+        speed: 500,
+        centerMode: true,
+        centerPadding: '0px',
+        arrows: false,
+
+    })
+    // ==== Start Shop_Classic_page sliding Event jQuery  ===== //
+
 
     // ======== Start Chackout Page Here  ======== //
     $("#bank").click(function () {
