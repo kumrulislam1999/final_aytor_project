@@ -12,6 +12,24 @@
                           color: $orange_light
                       }
                   }
+
+                  li.dropdown {
+                      .dropdown-menu {
+                          width: 200px;
+                          background-color: $white_color;
+
+                          a {
+                              @include paragraph_sm($padding: 10px 20px, $color: $h1_color, );
+                              transition: 0.4s;
+                              width: 100%;
+
+                              &:hover {
+                                  color: $white_color ;
+                                  background-color: $orange_light
+                              }
+                          }
+                      }
+                  }
               }
 
               .ecommerce_cart {
@@ -36,6 +54,7 @@
                       }
                   }
               }
+
           }
       }
   }
