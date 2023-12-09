@@ -1,6 +1,14 @@
   /*--======= Start Header Section Here ======= --*/
   #header {
       .navbar {
+          .navbar-brand {
+              all: initial;
+
+              &:hover {
+                  all: initial
+              }
+          }
+
           #main_navbar {
               .navbar-nav {
                   li a {
