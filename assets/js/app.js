@@ -199,7 +199,7 @@ $(function () {
             }]
     });
     $('.profile_sliding_box').slick({
-        autoplay: false,
+        autoplay: true,
         autoplaySpeed: 2000,
         slidesToShow: 1,
         slidesToScroll: 1,
@@ -211,7 +211,7 @@ $(function () {
         asNavFor: '.profile_asnavfor_box'
     });
     $('.profile_asnavfor_box').slick({
-        autoplay: false,
+        autoplay: true,
         autoplaySpeed: 2000,
         slidesToShow: 7,
         slidesToScroll: 1,
