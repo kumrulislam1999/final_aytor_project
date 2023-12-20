@@ -30,50 +30,66 @@
     /*--======= Start Learn Section Here =======--*/
     #learn_section {
         margin: $section_padding 0;
-        background-color: $bg_color_dark;
 
-
-        .learn_item {
+        .section_content {
             position: relative;
-            z-index: 1;
 
-            .img_slide_back {
+            &::after {
+                content: "";
+                clip-path:
+                    polygon(50% 0%, 100% 0, 100% 100%, 75% 100%, 47% 100%, 9% 51%, 9% 0);
+                background-color: $bg_color_light;
                 position: absolute;
-                padding-top: 47px;
-                left: 0;
-                bottom: -40px;
-                width: 50%;
-                z-index: -1
+                inset: 0;
             }
 
+            .learn_item {
+                position: relative;
+                z-index: 1;
 
-            .item_right {
-                padding: 76px 20px;
-
-                h3 {
-                    @include heading_3($padding: 0 0 10px, );
-                    text-align: left;
+                .img_slide_back {
+                    position: absolute;
+                    padding-top: 47px;
+                    left: 0;
+                    bottom: -40px;
+                    width: 50%;
+                    z-index: -1
                 }
 
-                p {
-                    @include paragraph_sm($padding: 0, )
-                }
 
-                hr {
-                    margin: 30px 0;
-                }
+                .item_right {
+                    padding: 76px 20px;
 
-                p.turm {
-                    display: block;
-                    @include paragraph_sm($padding: 0 0 10px, );
-
-                    i {
-                        @include social_icon($color: $orange_light, $width: 16px, $height: 16px, )
+                    h3 {
+                        @include heading_3($padding: 0 0 10px, );
+                        text-align: left;
                     }
-                }
 
-                a {
-                    @include btn_sm($bg_color: $orange_light, $padding: 13px 18px, $margin: 24px 0 0);
+                    p {
+                        @include paragraph_sm($padding: 0, )
+                    }
+
+                    hr {
+                        margin: 30px 0;
+                    }
+
+                    p.turm {
+                        display: block;
+                        @include paragraph_sm($padding: 0 0 10px, );
+
+                        i {
+                            @include social_icon($color: $orange_light, $width: 16px, $height: 16px, )
+                        }
+                    }
+
+                    a {
+                        @include btn_sm($bg_color: $orange_light, $padding: 13px 18px, $margin: 24px 0 0);
+                        transition: 0.4s;
+
+                        &:hover {
+                            background-color: $black_dark;
+                        }
+                    }
                 }
             }
         }
@@ -251,6 +267,8 @@
                     }
                 }
             }
+
+            .profile_asnavfor_box {}
         }
 
 

@@ -121,21 +121,6 @@ $(function () {
     })
 
 
-    $("#timer").countdown("2024/12/10", function (event) {
-        var $this = $(this).html(
-            event.strftime(
-                "" +
-                " <div><h4>%D</h4> <p>Days</p></div> " +
-                "<span>:</span>" +
-                " <div><h4>%H</h4> <p> Hour </p></div> " +
-                "<span>:</span>" +
-                " <div><h4>%M</h4> <p>Minute</p></div>   " +
-                "<span>:</span>" +
-                " <div><h4>%S</h4> <p>Second</p> </div>  "
-            )
-        );
-    });
-
     $('.latest_sliding_box').slick({
         autoplay: true,
         autoplaySpeed: 1000,
@@ -214,7 +199,7 @@ $(function () {
             }]
     });
     $('.profile_sliding_box').slick({
-        autoplay: true,
+        autoplay: false,
         autoplaySpeed: 2000,
         slidesToShow: 1,
         slidesToScroll: 1,
@@ -226,7 +211,7 @@ $(function () {
         asNavFor: '.profile_asnavfor_box'
     });
     $('.profile_asnavfor_box').slick({
-        autoplay: true,
+        autoplay: false,
         autoplaySpeed: 2000,
         slidesToShow: 7,
         slidesToScroll: 1,
@@ -447,6 +432,22 @@ $(function () {
 })
 
 
+// ======== Start Counter Page Here  ======== //
+$("#timer").countdown("2024/12/10", function (event) {
+    var $this = $(this).html(
+        event.strftime(
+            "" +
+            " <div><h4>%D</h4> <p>Days</p></div> " +
+            "<span>:</span>" +
+            " <div><h4>%H</h4> <p> Hour </p></div> " +
+            "<span>:</span>" +
+            " <div><h4>%M</h4> <p>Minute</p></div>   " +
+            "<span>:</span>" +
+            " <div><h4>%S</h4> <p>Second</p> </div>  "
+        )
+    );
+});
+// ======== End Counter Page Here  ======== //
 
 
 // ======== Start ToolTip Here  ======== //
